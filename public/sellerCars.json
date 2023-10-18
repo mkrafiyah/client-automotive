@@ -1,34 +1,48 @@
 {
     "cars": [
       {
-        "image": "https://example.com/car1.jpg",
+        "id": "1",
+        "image": "https://i.ibb.co/Zh32rjq/seller-2.jpg",
         "name": "Audi A8",
         "price": "$65,000",
-        "badge": "Audi"
+        "badge": "New",
+        "year": "2017",
+        "speed": "150000"
       },
       {
+        "id": "2",
         "image": "https://i.ibb.co/NTf16Lp/seller-1.jpg",
         "name": "BMW 5 Series",
         "price": "$55,500",
-        "badge": "BMW"
+        "badge": "New",
+        "year": "2014",
+        "speed": "140000"
       },
       {
-        "image": "https://example.com/car3.jpg",
+        "id": "3",
+        "image": "https://i.ibb.co/jL27ggB/seller-3.jpg",
         "name": "Mercedes-Benz E-Class",
         "price": "$60,000",
-        "badge": "Mercedes-Benz"
+        "badge": "Used",
+        "year": "2019",
+        "speed": "12000"
       },
-      {
-        "image": "https://example.com/car4.jpg",
+      { "id": "4",
+        "image": "https://i.ibb.co/6tJQT9T/seller-4.jpg",
         "name": "Toyota Camry",
         "price": "$28,500",
-        "badge": "Toyota"
+        "badge": "New",
+        "year": "2017",
+        "speed": "15000"
       },
       {
-        "image": "https://example.com/car5.jpg",
+        "id": "5",
+        "image": "https://i.ibb.co/VpyW7r5/seller-5.jpg",
         "name": "Ford Mustang",
         "price": "$45,000",
-        "badge": "Ford"
+        "badge": "Used",
+        "year": "2017",
+        "speed": "120000"
       }
     ]
   }
