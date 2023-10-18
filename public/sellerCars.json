@@ -1,0 +1,35 @@
+{
+    "cars": [
+      {
+        "image": "https://example.com/car1.jpg",
+        "name": "Audi A8",
+        "price": "$65,000",
+        "badge": "Audi"
+      },
+      {
+        "image": "https://i.ibb.co/NTf16Lp/seller-1.jpg",
+        "name": "BMW 5 Series",
+        "price": "$55,500",
+        "badge": "BMW"
+      },
+      {
+        "image": "https://example.com/car3.jpg",
+        "name": "Mercedes-Benz E-Class",
+        "price": "$60,000",
+        "badge": "Mercedes-Benz"
+      },
+      {
+        "image": "https://example.com/car4.jpg",
+        "name": "Toyota Camry",
+        "price": "$28,500",
+        "badge": "Toyota"
+      },
+      {
+        "image": "https://example.com/car5.jpg",
+        "name": "Ford Mustang",
+        "price": "$45,000",
+        "badge": "Ford"
+      }
+    ]
+  }
+  
