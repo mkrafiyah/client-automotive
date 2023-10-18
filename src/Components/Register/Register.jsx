@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 
-const Login = () => {
+const Register = () => {
     return (
         <div>
-            <div className="hero min-h-screen ">
-                <div className="hero-content flex-col w-full m-4 md:w-1/2 rounded-xl bg-sky-200 p-5">
+          <div className="hero min-h-screen ">
+                <div className="hero-content flex-col w-full m-4  md:w-1/2 rounded-xl bg-sky-200 p-5">
                     <div className="text-center lg:text-left p-3">
-                        <h1 className="text-5xl font-bold text-sky-800">Login now!</h1>
+                        <h1 className="text-base md:text-5xl font-bold text-sky-800">Register now!</h1>
                         
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-2xl shadow-2xl bg-base-100 p-3">
@@ -28,9 +28,9 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-sky-500 text-white">Login</button>
+                                <button className="btn bg-sky-500 text-white">Register</button>
                             </div>
-                            <p>Do not have an account? Go to <Link className="text-sky-600" to='/register'>Register</Link> </p>
+                            <p>Already have an account? Go to <Link className="text-sky-600" to='/login'>Login</Link> </p>
                         </form>
                     </div>
                 </div>
@@ -39,4 +39,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
