@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const CarDetail = (carDetail) => {
-    // const { _id, photo, name, brand, carType } = carDetail;
-    console.log( carDetail)
+   console.log(carDetail.carDetail._id)
 
     return (
         <div>
@@ -18,7 +18,11 @@ const CarDetail = (carDetail) => {
                         <div className="badge badge-outline">{carDetail.carDetail.price}</div>
                         <div className="badge badge-outline">{carDetail.carDetail.rating}</div>
                     </div>
+
+                    <Link to={`/carDetail/${carDetail.carDetail._id}`}>
                     <button className="btn bg-sky-400">Details</button>
+                    </Link>
+                  
                     <button className="btn bg-sky-800 text-white">Update</button>
                 </div>
             </div>
