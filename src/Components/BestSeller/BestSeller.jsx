@@ -4,7 +4,7 @@ import Car from "../Car/Car";
 
 const BestSeller = () => {
    const [carSeller, setCarSeller] = useState([]);
-   console.log(carSeller)
+   
     useEffect(()=>{
         fetch('./sellerCars.json')
         .then(res=>res.json())

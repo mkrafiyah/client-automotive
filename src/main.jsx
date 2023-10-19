@@ -13,6 +13,7 @@ import AddProducts from './Components/AddProducts/AddProducts.jsx';
 import MyCart from './Components/MyCart/MyCart.jsx';
 import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
+import BrandDetails from './Components/BrandDetails/BrandDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,11 +23,18 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        // loader: ()=> fetch('http://localhost:5000/cars')
       },
       {
         path: '/addProducts',
-        element: <AddProducts></AddProducts>
+        element: <AddProducts></AddProducts>,
+        // loader: ()=> fetch('./cars.json')
+      },
+      {
+        path: '/cars/:brand',
+        element: <BrandDetails></BrandDetails>,
+        //loader: ()=> fetch(`http://localhost:5000/cars/${brand}`)
       },
       {
         path: '/myCart',

@@ -7,7 +7,7 @@ const Banner = () => {
         Aos.init()
     }, [])
     return (
-        <div>
+        <div className="mb-10">
             <div data-aos="fade-down-right" className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/SmrsLW1/banner-car.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">

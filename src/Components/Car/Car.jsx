@@ -1,7 +1,7 @@
 
 
 const Car = ({car}) => {
-    console.log(car)
+   
     return (
         <div>
             <div className="card  h-96 bg-sky-100 shadow-xl">
