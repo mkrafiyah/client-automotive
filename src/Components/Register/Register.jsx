@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
@@ -34,10 +36,11 @@ const Register = () => {
         createUser(email, password)
         .then(result =>{
            
-            console.log('successful', result.user)
+            setSuccessRegistration('successful', result.user)
         })
         .catch(err =>{
             console.error(err)
+            setRegistrationError(err.message)
         })
    }
     return (
@@ -85,6 +88,15 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+
+            {
+              successRegistration && <p>{toast("Registration Successful")}</p>  
+            }
+            {
+                registrationError && <p>{toast("Registration Failed")}</p>
+            }
+
+            <ToastContainer />
         </div>
     );
 };

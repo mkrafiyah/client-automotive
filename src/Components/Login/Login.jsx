@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
     const {signIn} = useContext(AuthContext);
+    const [successLogin, setSuccessLogin] = useState('');
+    const [errorLogin, setErrorLogin] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -15,13 +19,17 @@ const Login = () => {
          const password = form.get("password");
          console.log(email, password)
 
+         setSuccessLogin('');
+         setErrorLogin('');
+
          signIn(email, password)
          .then(result=>{
-            console.log(result.user)
+            setSuccessLogin('successful', result.user)
             navigate(location?.state ? location.state : '/')
          })
          .catch(error=>{
             console.error(error)
+            setErrorLogin(error.message);
          })
     }
     return (
@@ -57,6 +65,15 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+
+            {
+               successLogin &&  <p>{toast("Login Successful")}</p>
+                
+            }
+            {
+                errorLogin &&  <p>{errorLogin}</p>
+            }
+            <ToastContainer />
         </div>
     );
 };
