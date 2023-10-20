@@ -21,7 +21,7 @@ const OrderCart = ({ order, ordersInCart, setOrdersInCart }) => {
             'Your file has been deleted.',
             'success'
           )
-        fetch(`http://localhost:5000/order/${order._id}`, {
+        fetch(` https://server-automotive-dub8js5he-mahbubas-projects.vercel.app/order/${order._id}`, {
             method: 'DELETE'
         })
         .then(res=>res.json())

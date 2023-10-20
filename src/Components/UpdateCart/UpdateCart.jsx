@@ -36,7 +36,7 @@ const UpdateCart = () => {
 
         // server
 
-        fetch(`http://localhost:5000/updateCart/${_id}`, {
+        fetch(` https://server-automotive-dub8js5he-mahbubas-projects.vercel.app/updateCart/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
