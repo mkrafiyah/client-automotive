@@ -23,7 +23,10 @@ const CarDetail = (carDetail) => {
                     <button className="btn bg-sky-400">Details</button>
                     </Link>
                   
-                    <button className="btn bg-sky-800 text-white">Update</button>
+                     <Link to={`/updateCart/${carDetail.carDetail._id}`}>
+                     <button className="btn bg-sky-800 text-white">Update</button>
+                     </Link>
+                    
                 </div>
             </div>
         </div>

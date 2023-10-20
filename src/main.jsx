@@ -15,6 +15,7 @@ import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import BrandDetails from './Components/BrandDetails/BrandDetails.jsx';
 import SingleDetail from './Components/SingleDetail/SingleDetail.jsx';
+import UpdateCart from './Components/UpdateCart/UpdateCart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/myCart',
-        element: <MyCart></MyCart>
+        element: <MyCart></MyCart>,
+        loader: ()=>fetch('http://localhost:5000/order')
+      },
+      {
+        path: '/updateCart/:id',
+        element: <UpdateCart></UpdateCart>,
+        // loader: ({params})=> fetch(`http://localhost:5000/order/${params.id}`)
       },
       {
         path: '/login',
