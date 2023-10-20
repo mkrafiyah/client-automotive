@@ -1,7 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import {FaUserDoctor} from "react-icons/fa6";
 
 
 const Navbar = () => {
+const {user, logOut} = useContext(AuthContext);
+
+const handleSignOut = () =>{
+    logOut()
+    .then(result=>{
+        console.log(result.user)
+      
+    })
+    .catch(error=>{
+        console.error(error)
+    })
+}
+
     const navLinks = <>
      <li> <NavLink to='/' 
      style={isActive => ({
@@ -46,9 +62,29 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
+                {
+                    user ?
+                      <button onClick={handleSignOut} className="btn">Sign Out</button>
+                    :
+                    <Link to='/login'>
+                    <button className="btn">Login</button>
+                    </Link>
+                }
+                 {
+                    user ? <span>{user.email}
+                       <p>{user.displayName}</p>
+                        <img className="w-10 rounded" src={user.photoURL} alt=""/>
+                         <FaUserDoctor className="rounded w-10"></FaUserDoctor>
+                         </span> : ''
+                }
+                
+                
+                
                 <div className="navbar-end">
                     <a className="btn bg-sky-500 text-white">Google Login</a>
+                    
                 </div>
+                
             </div>
         </div>
     );
