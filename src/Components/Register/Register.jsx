@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
+    const {createUser} = useContext(AuthContext);
+    const [successRegistration, setSuccessRegistration] = useState('');
+    const [registrationError, setRegistrationError] = useState('');
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -14,6 +16,19 @@ const Register = () => {
         const email = form.get("email");
         const password = form.get("password");
         console.log(name, photo,email, password)
+
+        setSuccessRegistration('');
+        setRegistrationError('');
+
+        //validation
+
+        if(password.length < 6){
+            setRegistrationError('error')
+            return;
+        }else if(!/^(?=.*[A-Z][$@#%])/.test(password)){
+            setRegistrationError('error')
+            return;
+        }
 
         //create user
         createUser(email, password)

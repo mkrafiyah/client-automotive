@@ -1,11 +1,39 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import {FaUserDoctor} from "react-icons/fa6";
+import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from "firebase/auth";
 
 
 const Navbar = () => {
-const {user, logOut} = useContext(AuthContext);
+    // const [googleUser, setGoogleUser] = useState(null);
+const {user, logOut, auth} = useContext(AuthContext);
+// const provider = new GoogleAuthProvider();
+
+// //google
+
+// const handleGoogleSignIn = ()=>{
+//     signInWithPopup(auth, provider)
+//     .then(result => {
+//         const loggedUser = result.user;
+//         setGoogleUser(loggedUser)
+
+//     })
+//     .catch(error => {
+//         console.log(error.message)
+//     })
+// }
+// //google signOut
+
+// const handleGoogleSignOut = ()=>{
+//     signOut(auth)
+//     .then(result=>{
+//         setGoogleUser(null)
+//     })
+//     .catch(error => {
+//         console.log(error.message)
+//     })
+// }
 
 const handleSignOut = () =>{
     logOut()
@@ -62,6 +90,11 @@ const handleSignOut = () =>{
                         {navLinks}
                     </ul>
                 </div>
+                
+                
+                <div className="navbar-end">
+
+                  
                 {
                     user ?
                       <button onClick={handleSignOut} className="btn">Sign Out</button>
@@ -79,9 +112,9 @@ const handleSignOut = () =>{
                 }
                 
                 
-                
-                <div className="navbar-end">
-                    <a className="btn bg-sky-500 text-white">Google Login</a>
+                    
+                    
+                    
                     
                 </div>
                 
