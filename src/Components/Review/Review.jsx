@@ -8,9 +8,9 @@ const Review = () => {
     }, [])
     return (
         <div>
-            <h2 className="text-4xl text-center font-bold mb-10 mt-10">Happy <span className="text-sky-600">Customer</span></h2>
+            <h2 className="text-4xl text-center font-bold mb-10 mt-10 mx-7">Happy <span className="text-sky-600">Customer</span></h2>
             {/* review 1 */}
-            <div data-aos="flip-down" className="bg-sky-400 w-full flex mx-auto items-center justify-center mb-5">
+            <div data-aos='fade-up' className="bg-sky-400 w-full flex mx-auto items-center justify-center mb-5">
                 <div className="p-5 m-6">
 
                     <div>
@@ -25,7 +25,7 @@ const Review = () => {
                 </div>
             </div>
              {/* review 2 */}
-            <div data-aos="flip-down" className="bg-sky-400 w-full flex mx-auto items-center justify-center">
+            <div data-aos='fade-up' className="bg-sky-400 w-full flex mx-auto items-center justify-center">
                 <div className="p-5 m-6">
 
                     <div>

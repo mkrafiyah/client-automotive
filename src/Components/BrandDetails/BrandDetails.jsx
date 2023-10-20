@@ -17,7 +17,7 @@ const BrandDetails = () => {
     return (
         <>
             <div>
-            <div className="carousel w-full h-[500px] mb-20">
+            <div className="carousel mx-7 w-[350px] md:w-[700px] lg:w-full h-[500px] mb-20">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://i.ibb.co/dgYXdqr/d-47.jpg" className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -69,7 +69,7 @@ const BrandDetails = () => {
             </div>
             </div>
             {/* display card */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <div className="grid ml-5 md:ml-20 lg:ml-0 grid-cols-1  lg:grid-cols-3 gap-7">
                 {
                     carsForBrand.map(carDetail => <CarDetail key={carDetail._id} carDetail={carDetail}></CarDetail>)
                 }

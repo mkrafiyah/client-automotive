@@ -6,7 +6,7 @@ const DisplayCard = ({car}) => {
     return (
         <div>
             <Link to={`/cars/${brand}`}>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card h-72 w-72 lg:w-96 bg-base-100 shadow-xl mx-auto">
                 <figure><img src={brand_image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
