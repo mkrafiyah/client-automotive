@@ -3,10 +3,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-
+import Swal from "sweetalert2";
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const {user, signIn} = useContext(AuthContext);
     const [successLogin, setSuccessLogin] = useState('');
     const [errorLogin, setErrorLogin] = useState('');
     const location = useLocation();
@@ -26,9 +26,10 @@ const Login = () => {
          .then(result=>{
             setSuccessLogin('successful', result.user)
             navigate(location?.state ? location.state : '/')
+            console.log(successLogin)
          })
          .catch(error=>{
-            console.error(error)
+            
             setErrorLogin(error.message);
          })
     }
@@ -67,7 +68,7 @@ const Login = () => {
             </div>
 
             {
-               successLogin &&  <p>{toast("Login Successful")}</p>
+               successLogin &&  Swal.fire('SweetAlert2 is working!')
                 
             }
             {

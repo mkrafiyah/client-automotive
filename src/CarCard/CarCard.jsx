@@ -15,7 +15,7 @@ const CarCard = () => {
         <h2 className="text-3xl font-bold text-center ">Featured <span className="text-sky-500">Brands</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 p-3 lg:p-0">
            {
-            cars.map(car=> <DisplayCard key={car.id} car={car}></DisplayCard>)
+            cars && cars.map(car=> <DisplayCard key={car.id} car={car}></DisplayCard>)
            }
         </div>
         </>

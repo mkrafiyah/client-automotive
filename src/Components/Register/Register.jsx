@@ -37,6 +37,7 @@ const Register = () => {
         .then(result =>{
            
             setSuccessRegistration('successful', result.user)
+            
         })
         .catch(err =>{
             console.error(err)

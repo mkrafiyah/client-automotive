@@ -71,7 +71,7 @@ const BrandDetails = () => {
             {/* display card */}
             <div className="grid ml-5 md:ml-20 lg:ml-0 grid-cols-1  lg:grid-cols-3 gap-7">
                 {
-                    carsForBrand.map(carDetail => <CarDetail key={carDetail._id} carDetail={carDetail}></CarDetail>)
+                   carsForBrand && carsForBrand.map(carDetail => <CarDetail key={carDetail._id} carDetail={carDetail}></CarDetail>)
                 }
             </div>
         </>
