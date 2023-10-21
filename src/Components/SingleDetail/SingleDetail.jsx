@@ -7,7 +7,7 @@ const SingleDetail = () => {
     const [detailCar, setDetailCar] = useState([]);
     const params = useParams();
     useEffect(() => {
-        fetch(`https://server-automotive-dub8js5he-mahbubas-projects.vercel.app/carDetail/${params.id}`)
+        fetch(`https://server-automotive-767z1pxoo-mahbubas-projects.vercel.app/carDetail/${params.id}`)
             .then(res => res.json())
             .then(data => setDetailCar(data))
     }, [])
@@ -18,7 +18,7 @@ const SingleDetail = () => {
         console.log(newOrder)
 
         //send data to the server
-        fetch(' https://server-automotive-dub8js5he-mahbubas-projects.vercel.app/order',{
+        fetch('https://server-automotive-767z1pxoo-mahbubas-projects.vercel.app/order',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

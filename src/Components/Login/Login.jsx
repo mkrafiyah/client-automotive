@@ -68,7 +68,7 @@ const Login = () => {
             </div>
 
             {
-               successLogin &&  Swal.fire('SweetAlert2 is working!')
+               successLogin &&  Swal.fire('Login SuccessFul!')
                 
             }
             {

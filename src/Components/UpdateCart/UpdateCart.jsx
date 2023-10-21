@@ -6,7 +6,7 @@ const UpdateCart = () => {
     const [carUpdate, setCarUpdate] = useState([]);
     const params = useParams();
     useEffect(() => {
-        fetch(`https://server-automotive-dub8js5he-mahbubas-projects.vercel.app/carDetail/${params.id}`)
+        fetch(`https://server-automotive-767z1pxoo-mahbubas-projects.vercel.app/carDetail/${params.id}`)
             .then(res => res.json())
             .then(data => setCarUpdate(data))
     }, [])
@@ -36,7 +36,7 @@ const UpdateCart = () => {
 
         // server
 
-        fetch(`https://server-automotive-dub8js5he-mahbubas-projects.vercel.app/updateCart/${_id}`, {
+        fetch(`https://server-automotive-767z1pxoo-mahbubas-projects.vercel.app/updateCart/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
